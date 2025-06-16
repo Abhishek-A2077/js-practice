@@ -1,0 +1,23 @@
+img{
+    width: 100px;
+    height: auto;
+    padding-top: 10px;
+
+}
+.container{
+    text-align: center;
+    max-width: fit-content;
+    margin: auto;
+    margin-top:30px;
+    padding: 10px 100px 40px 100px;
+    box-shadow: 5px 15px 15px;
+    background-color: rgb(254, 229, 199);
+    border-radius: 0.7em;
+}
+#btn{
+    font-size: large;
+    margin-left: 15px;
+}
+#num{
+    margin-left: 15px;
+}

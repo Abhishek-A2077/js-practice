@@ -1,0 +1,44 @@
+body{
+    background-color: black;
+    color:rgb(218, 175, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#h1{
+    color: floralwhite;
+}
+#num{
+    color: floralwhite;
+    font-weight: bold;
+    font-size: 4em;
+}
+#h1{
+    text-align:center;
+}
+
+.container{
+    text-align: center;
+}
+#btn{
+    background-color: rgb(35, 19, 83);
+    color:rgb(218, 175, 255);
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 3em;
+    border-radius: 0.2em;
+    border-color: rgb(218, 175, 255);
+    transition: background-color color;
+}
+#btn:hover{
+    background-color: rgb(218, 175, 255);
+    color: rgb(35, 19, 83);
+}
+#six{
+    color: rgb(130, 230, 149);
+    font-size: 5em;
+    font-weight: bolder;
+}
+#lose{
+    color: rgb(241, 124, 148);
+    font-size: 5em;
+    font-weight: bolder;
+}

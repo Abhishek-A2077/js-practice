@@ -1,0 +1,12 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(186, 210, 255);
+    background-color: rgb(41, 85, 80);    
+}
+#nameinput{
+    color:rgb(251, 252, 253);
+    background-color: grey;
+    font-weight: 600;
+    font-size: large;
+
+}

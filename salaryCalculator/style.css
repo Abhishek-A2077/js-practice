@@ -1,0 +1,36 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    background-color: rgb(250, 250, 250);    
+}
+#ctc{
+    background-color:aliceblue ;
+    font-size: large;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(4, 77, 86);
+    border-width: 0.5em;
+    border-radius: 0.4em;
+
+}
+#ctcbutton{
+    text-align: center;
+    color: rgb(4, 77, 86);
+    font-size: large;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+#ctcbutton:hover{
+    background-color: rgb(4, 77, 86);  
+    color: rgb(250, 250, 250); 
+}
+div{
+    max-width: fit-content;
+    box-shadow: 5px 5px 15px;
+    border-radius: 1.5em;
+    padding: 5px 20px 5px 20px;
+    margin:auto;
+    margin-top: 150px;
+    background-color: darkslategrey;
+    color: rgb(202, 220, 255);
+}
