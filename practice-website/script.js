@@ -142,6 +142,11 @@
 // function fullname(...name){
 //     return name.join(" ");
 // }
+//example 2:
+// function multiply(...numarr){
+//     return numarr.reduce((acc,x)=>acc*x);
+// }
+// console.log(multiply(1,2,3,3,2));
 
 // strdname = fullname("albus", "percivral", "wolfric", "brian", "dumbledore");
 // console.log(strdname);
@@ -154,8 +159,55 @@
 //     return sum;
 // }
 // console.log((sum(1,2,30,10,200)));
+// arr=["a","b","c"];
+// console.log(`${arr.join("")}`);
 
-arr=["a","b","c"];
-console.log(`${arr.join("")}`);
+// //map() function:
+// arr=[2,3,4,5,6];
+// arr=arr.map(n=>n*2);
+// console.log(arr);
+// //example 2:
+// strings=["ab","cd","ef","gh","ij"];
+// newstrings=strings.map(string=>string+"h");
+// console.log(newstrings);
 
+// //arguments object in js functions, for n number of arguments
+// function add(x,y){
+//     let result=x+y;
+//     for(let i=2;i<arguments.length;i++){
+//         result+=arguments[i];
+//     }
+//     return result;
+// }
+// console.log(add(2,4,6,8));
 
+//reduce() function:
+// arr=[2,4,6,8];
+// sum=arr.reduce((acc,x)=>acc+x,0);
+// console.log(sum);
+
+//arrow functions
+// arr=[2,4,6];
+// let sum = (x,y) =>x+y;
+// res=sum(arr[1],arr[2]);
+// console.log(res);
+//used in map:
+// arr=["this","is","map"];
+// newarr=arr.map(str=>str.toUpperCase());
+// console.log(newarr);
+
+// //topic: addEventListener(event,function(){ });
+// btn=document.getElementById("btn");
+// btn.addEventListener("click",func=()=>(alert("click"),console.log("click")));
+// btn.addEventListener("mouseover",funct=()=>(console.log("mouseover")));
+// btn.addEventListener("keydown",funct=()=>(console.log("keydown")));
+
+// //fetch()
+// fetch('https://jsonplaceholder.typicode.com/posts/1')
+//   .then(response => response.json())
+//   .then(data => console.log(data))
+//   .catch(error => console.log('Error:', error));
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log('Error:',error))

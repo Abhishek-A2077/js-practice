@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple DOM example</title>
+  </head>
+  <body>
+      <section>
+        <p>Here we will add a link to the</p> 
+        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+        <div id="para"></div>
+        <div id="image"></div>
+        
+      </section>
+      
+      <script>
+        
+        const link=document.querySelector("a");
+        link.textContent="this is the changed text content";
+        link.href="example.com";
+
+        const plink=document.querySelector("p");
+        plink.textContent="here is a link to:";
+
+        // creating a new element
+        const dlink=document.getElementById("para");
+        const newp=document.createElement("p");
+        newp.textContent="this is a new para";
+        dlink.appendChild(newp);
+
+
+        //creating a img
+        
+        const newi=document.createElement("img");
+        const image=document.getElementById("image");
+        newi.src=`sample.jpg`;
+        image.appendChild(newi);
+
+      </script>
+      </body>
+  </body>
+</html>
