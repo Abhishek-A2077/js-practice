@@ -207,7 +207,188 @@
 //   .then(response => response.json())
 //   .then(data => console.log(data))
 //   .catch(error => console.log('Error:', error));
-fetch('https://jsonplaceholder.typicode.com/posts/1')
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.log('Error:',error))
+
+// fetch('https://jsonplaceholder.typicode.com/posts/1')
+//     .then(response => response.json())
+//     .then(data => console.log(data))
+//     .catch(error => console.log('Error:',error))
+
+// //date time
+// const StartDate=new Date ("2027-02-01")
+// const EndDate=new Date("2027-03-01")
+// let Leap=new Date("2027-02-29")
+// // console.log(EndDate,StartDate)
+// if(Leap<EndDate && Leap>StartDate){
+//     console.log("yes")
+// }
+// else{
+//     console.log("No")
+// }
+
+// //callback
+// function IsDateBetween(Date,StartDate,EndDate,Callback){
+//     let boolean;
+//     if (Date>StartDate&&Date<EndDate){
+//         boolean= true
+//     }
+//     else{
+//         boolean= false
+//     }
+//     Callback(boolean)
+// }
+
+// function Display(IsDateBetween){
+//     document.getElementById("Result").textContent= IsDateBetween ? "yes" : "No"
+// }
+// const StartDate=new Date ("2028-02-01")
+// const EndDate=new Date("2028-03-01")
+// let Leap=new Date("2028-02-29")
+// IsDateBetween(Leap,StartDate,EndDate,Display)
+
+// // forEach()
+// let arr=[]
+// function double(n){
+//     arr.push(n*2)
+// }
+// newarr=[1,2,3,4]
+// newarr.forEach(double)
+// console.log(arr)
+
+// // forEach() with 3 args
+// function double(element,index,array){
+//     array[index]=element*2
+// }
+// narr=[1,2,3,4,5]
+// narr.forEach(double)
+// console.log(narr)
+
+// // forEach with 3 args with arrow function
+// narr=[1,2,3,4,5]
+// narr.forEach((n,i,arr)=>arr[i]=n*2)
+// console.log(narr)
+
+// // or, use map():
+// narr=[1,2,3,4,5]
+// newnarr=narr.map(double)
+// console.log(newnarr)
+// function double(element){
+//     return element*2
+// }
+
+// //filter()
+// astr='abcdefgh'
+// str=[...astr].filter(element=>element!=="a" && element!=="b")
+// console.log(str)
+
+// arr=[5,10,15]
+// n=arr.reduce((acc,n)=>acc+n)
+// console.log(n)
+
+
+// // Explanation of forEach,filter,map,reduce with their parameters
+// forEach((element)=>...) or forEach((element,index,array)=>...) (returns nothing)
+// array=filter((element)=>...)
+// array=map((element)=>...)
+// value=array.reduce((accumulator,element)=>...)
+
+// // setTimeout() and arrow functions
+// arrs=[1,2,3,4]
+// setTimeout(()=>{let narrs=[]; 
+//     for(arr of arrs){narrs.push(arr*2)}; 
+//     console.log(narrs)},3000)
+
+// //objects (made of key:value pairs)
+// const person={name:"raj",age:21,func:function(){console.log("this is a method")}}
+// person.func()
+// console.log(person.name,person.age)
+
+// const person={name:"raj",age:21,func:()=>console.log("this is a method")}
+// person.func()
+// console.log(person.name,person.age)
+
+// //this keyword
+// const person={name:"raj",age:21,func2:()=>"the 2nd function",func:function(){console.log(`this is a method, to show ${this.func2()}`)}}
+// person.func()
+// console.log(person.name,person.age)
+
+// // constructor (used to create new objects with same keys different values)
+// function student(name,age){
+//     this.name=name;
+//     this.age=age;
+// }
+
+// const ney=new student("guy",60)
+// console.log(ney.name,ney.age)
+
+// // class and constructor
+// class person{
+//     constructor(pname,age){
+//         this.pname=pname
+//         this.age=age
+//     }
+// }
+// const person1=new person("ab",21)
+// console.log(person1.pname,person1.age)
+
+//static in class (static object in a class belongs to class itself and not an object created from the class)
+// class person{
+//     static name="a"
+//     static age=21
+//     static display(){
+//         console.log("displays")
+//     }
+//     constructor(name,age){
+//         this.name=name
+//         this.age=age
+//     }
+// }
+// console.log(person.name,person.age)
+// person.display()
+// let person1=new person("b",32)
+// console.log(person1.name,person1.age)
+
+//date time
+let startDate=new Date("2024-01-30")
+let endDate=new Date("2028-03-01")
+let date=new Date("2024-02-21") //default year needs to be a leap year, or else if 2021 it defaults to 2021-03-01
+function isBetween(startDate,endDate,date){
+    if(date>=startDate&&date<=endDate){
+        console.log(`yes it includes ${date}`)
+    }
+    else{
+        bool=false
+        console.log(`no it does not include ${date}`) 
+    }
+}
+function isCheckLeap(startDate,endDate){
+    
+    if(startDate>endDate){
+        console.log("invalid date range")
+    }
+    else if(startDate.getFullYear()==endDate.getFullYear()){
+        let yr=startDate.getFullYear()
+        date.setFullYear(yr)
+    }
+    else if(startDate.getFullYear()!=endDate.getFullYear()){
+        let arr=[]
+        yrRange=endDate.getFullYear()-startDate.getFullYear()
+        console.log(yrRange)
+        let yr=startDate.getFullYear()
+        for(let i=0;i<=yrRange;i++){
+            console.log(yr)
+            let checkDate=new Date(date.getTime())
+            checkDate.setFullYear(yr)
+            if(date.getMonth()==checkDate.getMonth()){ //if valid date, month is equal, i.e, february. else, goes to march, so not equal
+                date.setFullYear(yr)
+                bool=isBetween(startDate,endDate,date)
+            }
+            else{
+               console.log(`not a leap year`) 
+            }
+            
+            yr++
+        }
+    }
+}
+
+isCheckLeap(startDate,endDate)
