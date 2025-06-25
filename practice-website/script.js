@@ -348,49 +348,49 @@
 // console.log(person1.name,person1.age)
 
 // //date time
-// let startDate=new Date("2024-01-30")
-// let endDate=new Date("2028-03-01")
-// let date=new Date("2024-02-29") //default year needs to be a leap year, or else if 2021 it defaults to 2021-03-01
-// function isBetween(startDate,endDate,date){
-//     if(date>=startDate&&date<=endDate){
-//         console.log(`yes it includes ${date}`)
-//     }
-//     else{
-//         bool=false
-//         console.log(`no it does not include ${date}`) 
-//     }
-// }
-// function isCheckLeap(startDate,endDate){
+let startDate=new Date("2024-01-30")
+let endDate=new Date("2028-03-01")
+let date=new Date("2024-02-29") //default year needs to be a leap year, or else if 2021 it defaults to 2021-03-01
+function isBetween(startDate,endDate,date){
+    if(date>=startDate&&date<=endDate){
+        console.log(`yes it includes ${date}`)
+    }
+    else{
+        bool=false
+        console.log(`no it does not include ${date}`) 
+    }
+}
+function isCheckLeap(startDate,endDate){
     
-//     if(startDate>endDate){
-//         console.log("invalid date range")
-//     }
-//     else if(startDate.getFullYear()==endDate.getFullYear()){
-//         let yr=startDate.getFullYear()
-//         date.setFullYear(yr)
-//     }
-//     else if(startDate.getFullYear()!=endDate.getFullYear()){
-//         yrRange=endDate.getFullYear()-startDate.getFullYear()
-//         console.log(yrRange)
-//         let yr=startDate.getFullYear()
-//         for(let i=0;i<=yrRange;i++){
-//             console.log(yr)
-//             let checkDate=new Date(date.getTime())
-//             checkDate.setFullYear(yr)
-//             if(date.getMonth()==checkDate.getMonth()){ //if valid date, month is equal, i.e, february. else, goes to march, so not equal
-//                 date.setFullYear(yr)
-//                 isBetween(startDate,endDate,date)
-//             }
-//             else{
-//                console.log(`not a leap year`) 
-//             }
+    if(startDate>endDate){
+        console.log("invalid date range")
+    }
+    else if(startDate.getFullYear()==endDate.getFullYear()){
+        let yr=startDate.getFullYear()
+        date.setFullYear(yr)
+    }
+    else if(startDate.getFullYear()!=endDate.getFullYear()){
+        yrRange=endDate.getFullYear()-startDate.getFullYear()
+        // console.log(yrRange)
+        let yr=startDate.getFullYear()
+        for(let i=0;i<=yrRange;i++){
+            console.log(yr)
+            let checkDate=new Date(date.getTime())
+            checkDate.setFullYear(yr)
+            if(date.getMonth()==checkDate.getMonth()){ //if valid date, month is equal, i.e, february. else, goes to march, so not equal
+                date.setFullYear(yr)
+                isBetween(startDate,endDate,date)
+            }
+            else{
+               console.log(`not a leap year`) 
+            }
             
-//             yr++
-//         }
-//     }
-// }
+            yr++
+        }
+    }
+}
 
-// isCheckLeap(startDate,endDate)
+isCheckLeap(startDate,endDate)
 
 // //Promises(resolve, then)(reject,catch)
 // function goSomewhere(){
@@ -445,6 +445,6 @@
 // json.stringify()
 // json.parse
 //.json is used to convert the raw response from fetch to the actual json format
-fetch("https://jsonplaceholder.typicode.com/users").then((response)=>response.json())
-                                                   .then((data)=>console.log(data))
-                                                   .catch((error)=>console.log(error))
+// fetch("https://jsonplaceholder.typicode.com/users").then((response)=>response.json())
+//                                                    .then((data)=>console.log(data))
+//                                                    .catch((error)=>console.log(error))
